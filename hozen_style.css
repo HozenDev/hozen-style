@@ -324,6 +324,7 @@ pre.src {
     margin: 2rem;
     background-color:#192024;
     line-height: 1.5em;
+    font-family: monospace;
 }
 
 pre.example:hover {
