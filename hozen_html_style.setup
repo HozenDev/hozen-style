@@ -1,0 +1,10 @@
+# -*- mode: org; -*-
+
+#+OPTIONS: html-style:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./reset.css" />
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./hozen_style.css" />
+
+#+HTML_HEAD: <script src="scripts/test.js"></script>
+
+#+AUTHOR: DUREL Enzo
+#+EMAIL: enzo.durel@etu.uca.fr
