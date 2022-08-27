@@ -1,7 +1,7 @@
 # -*- mode: org; -*-
 
 #+OPTIONS: html-style:nil
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://gitlab.isima.fr/endurel/hozen-style/reset.css" />
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://hozendev.github.io/hozen-style/reset.css" />
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://hozendev.github.io/hozen-style/hozen_style.css" />
 
 #+HTML_HEAD: <script src="https://hozendev.github.io/hozen-style/scripts/test.js"></script>
