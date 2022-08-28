@@ -92,7 +92,8 @@ main {
     list-style: square inside;
 }
 
-#content a {
+#content a,
+#content li {
     color: var(--color-fg);
 }
 
