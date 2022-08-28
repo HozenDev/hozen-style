@@ -87,6 +87,15 @@ main {
     transition: .6s;
 }
 
+#content ul {
+    margin-left: 2rem;
+    list-style: square inside;
+}
+
+#content a {
+    color: var(--color-fg);
+}
+
 #content .figure > p {
     text-align: center;
     font-size: 120%;
