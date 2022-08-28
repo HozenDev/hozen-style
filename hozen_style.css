@@ -410,6 +410,7 @@ pre.example {
     }
     #table-of-contents {
 	background-color: var(--color-bg);
+	float: none;
 	width: 100%;
 	height: auto;
 	top: 0;
