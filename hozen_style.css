@@ -84,7 +84,7 @@ main {
 }
 
 #content ul {
-    margin-left: 2rem;
+    margin: 0 2rem;
     list-style: square inside;
 }
 
@@ -344,13 +344,15 @@ pre.example:hover {
 
 table {
     margin: 1rem auto;
+    overflow: auto;
 }
 
 table td {
-    padding: 1em;
+    padding: .5em;
     box-sizing: border-box;
     border: 1px solid var(--color-fg);
     color: var(--color-fg);
+    font-family: monospace;
 }
 
 table > caption {
@@ -369,7 +371,7 @@ pre.example {
     background-color: rgba(0, 0, 0, 0.2);
     color: var(--color-fg);
     transition: .2s;
-    white-space: normal;
+    font-family: monospace;
 }
 
 #postamble .validation {

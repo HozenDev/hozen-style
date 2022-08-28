@@ -88,7 +88,7 @@ window.onload = function () {
 		let bigImg = document.createElement('img');
 		bigImg.src = image.src;
 		widget.appendChild(bigImg);
-		document.body.appendChild(widget);
+		document.body.insertBefore(widget, header);
 
 		widget.addEventListener('click', () => {
 		    widget.remove();
