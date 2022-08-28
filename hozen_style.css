@@ -35,15 +35,11 @@ body {
     /* background: url(./img/Kakariko.jpg) no-repeat center center fixed; */
     /* background-size: cover; */
     background-color: var(--color-bg);
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
 }
 
 main {
     margin: 0 auto;
-    display: flex;
-    flex-direction: row;
+    max-width: 90rem;
 }
 
 .widget {
@@ -112,13 +108,13 @@ pre {
 }
 
 #content {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
     max-width: 70rem;
     /* margin: 0 auto; */
     /* left: 20rem; */
-    /* margin-left: 20rem; */
+    margin-left: 20rem;
     /* margin-left: auto; */
     /* margin-right: auto; */
     /* margin-bottom: 5em; */
@@ -405,6 +401,9 @@ pre.example {
 @media (max-width: 840px) {
     main {
 	flex-direction: column;
+    }
+    #content {
+	margin-left: 0;
     }
     #table-of-contents h2:hover {
 	cursor: pointer;
