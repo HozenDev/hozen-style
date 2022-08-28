@@ -92,6 +92,10 @@ main {
     list-style: square inside;
 }
 
+pre {
+    overflow: auto;
+}
+
 #content a,
 #content li {
     color: var(--color-fg);
