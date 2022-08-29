@@ -99,6 +99,8 @@ main {
 
 pre {
     overflow: auto;
+    margin: 1rem 2rem;
+    padding: 1rem;
 }
 
 #content a {
@@ -353,8 +355,6 @@ code {
 pre.src {
     color: white;
     border: 2px solid #e6e6e6;
-    padding: 2em;
-    margin: 2rem;
     background-color:#192024;
     line-height: 1.5em;
     font-family: monospace;
@@ -367,8 +367,6 @@ pre.example:hover {
 
 pre.example {
     border-left: 10px solid var(--toc-a-first);
-    padding: 1rem;
-    margin: 0 2rem;
     background-color: var(--example-bg);
     color: var(--color-fg);
     transition: .2s;
