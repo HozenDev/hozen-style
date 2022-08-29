@@ -277,6 +277,7 @@ pre {
     font-size: 150%;
     transition: .5s;
     padding-top: 1rem;
+    margin-top: 0;
 }
 
 .outline-2 h2 span::after,
