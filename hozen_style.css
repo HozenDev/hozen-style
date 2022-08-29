@@ -3,6 +3,12 @@ html {
     font-family: sans-serif;
 }
 
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .theme-dark {
     --color-fg: #A27B5C;
     --color-bg: #2C3639;
@@ -97,11 +103,13 @@ pre {
 
 #content a {
     color: var(--color-fg);
+    word-break: break-word;
 }
 
 #content li {
-    margin: .4rem 0;
+    line-height: 1.5em;
     color: var(--font-color);
+    word-break: break-word;
 }
 
 #content .figure > p {
@@ -134,6 +142,7 @@ pre {
     font-variant: tabular-nums;
     letter-spacing: .05em;
     line-height: 1.4em;
+    word-break: break-word;
 }
 
 #table-of-contents {
@@ -434,17 +443,23 @@ table > caption {
 	border-bottom: 2px solid var(--color-fg);
 	border-top: 2px solid var(--color-fg);
 	justify-content: space-between;
+	min-width: 0;
+	font-size: 80%;
     }
     #table-of-contents h2 {
 	border: none;
 	border-right: 2px solid var(--color-fg);
 	width: 20rem;
 	background-color: var(--color-bg-alt);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding-left: 1rem;
+	padding-right: 1rem;
     }
     #text-table-of-contents {
 	visibility: hidden;
 	order: 3;
-	flex-grow: 100%;
 	min-width: 20rem;
 	width: 20rem;
 	position: fixed;
