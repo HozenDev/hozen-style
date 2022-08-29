@@ -95,13 +95,13 @@ pre {
     overflow: auto;
 }
 
-#content a,
-#content li {
+#content a {
     color: var(--color-fg);
 }
 
 #content li {
     margin: .4rem 0;
+    color: var(--font-color);
 }
 
 #content .figure > p {
