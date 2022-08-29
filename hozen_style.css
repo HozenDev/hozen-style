@@ -250,6 +250,14 @@ pre {
     transition: .5s;
 }
 
+#content p,
+.outline-2 h2,
+.outline-3 h3,
+.outline-2 h4 {    
+    padding: 0 2rem;
+    margin: 1rem 0;
+}
+
 .outline-2:nth-child(2n) {
     background-color: var(--color-bg-alt);
     border-radius: 0 72px 0 0;
@@ -268,20 +276,13 @@ pre {
     border-radius: 0 2rem 2rem 0;
     font-size: 150%;
     transition: .5s;
+    padding-top: 1rem;
 }
 
 .outline-2 h2 span::after,
 .outline-2 h3 span::after,
 .outline-2 h4 span::after {
     content: " - ";
-}
-
-#content p,,
-.outline-2 h2,
-.outline-3 h3,
-.outline-2 h4 {    
-    padding: 0 2rem;
-    margin: 1rem 0;
 }
     
 .outline-3 h3,
