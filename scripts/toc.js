@@ -3,16 +3,8 @@ const toc = document.getElementById("table-of-contents");
 let header = document.createElement("header");
 let main = document.createElement("main");
 
-createHeader();
 tocAndContentToMain();
-
-let themeCheck = document.createElement("input");
-themeCheck.id = "theme-switcher";
-themeCheck.type = "button";
-themeCheck.value = "Theme Switcher";
-toc.appendChild(themeCheck);
-
-themeCheck.addEventListener('click', toogleTheme);
+createHeader();
 
 function createHeader() {
     header.appendChild(document.getElementsByClassName("title")[0]);

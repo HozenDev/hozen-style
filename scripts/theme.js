@@ -1,3 +1,12 @@
+let themeCheck = document.createElement("input");
+themeCheck.id = "theme-switcher";
+themeCheck.type = "button";
+themeCheck.value = "Theme Switcher";
+
+themeCheck.addEventListener('click', toogleTheme);
+
+document.body.getElementById('table-of-contents').appendChild(themeCheck);
+
 /* set theme in html class */
 function setTheme(themeName) {
     localStorage.setItem('theme', themeName);
