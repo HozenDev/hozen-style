@@ -4,7 +4,9 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://hozendev.github.io/hozen-style/reset.css" />
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://hozendev.github.io/hozen-style/hozen_style.css" />
 
-#+HTML_HEAD: <script src="https://hozendev.github.io/hozen-style/scripts/test.js"></script>
+#+HTML_HEAD: <script src="https://hozendev.github.io/hozen-style/scripts/toc.js"></script>
+#+HTML_HEAD: <script src="https://hozendev.github.io/hozen-style/scripts/widget.js"></script>
+#+HTML_HEAD: <script src="https://hozendev.github.io/hozen-style/scripts/theme.js"></script>
 
 #+AUTHOR: DUREL Enzo
 #+EMAIL: enzo.durel@etu.uca.fr
