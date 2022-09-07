@@ -7,7 +7,7 @@ window.addEventListener('load', function () {
 
     themeCheck.addEventListener('click', toogleTheme);
 
-    document.body.getElementById('table-of-contents').appendChild(themeCheck);
+    document.getElementById('table-of-contents').appendChild(themeCheck);
 
     /* set theme in html class */
     function setTheme(themeName) {
