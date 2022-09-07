@@ -10,7 +10,8 @@ window.addEventListener('load', function () {
 		let bigImg = document.createElement('img');
 		bigImg.src = image.src;
 		widget.appendChild(bigImg);
-		document.body.insertBefore(widget, header);
+		document.body.insertBefore(widget,
+					   document.getElementsByTagName('header')[0]);
 
 		widget.addEventListener('click', () => {
 		    widget.remove();
