@@ -3,8 +3,8 @@ const toc = document.getElementById("table-of-contents");
 let header = document.createElement("header");
 let main = document.createElement("main");
 
-tocAndContentToMain();
 createHeader();
+tocAndContentToMain();
 
 let themeCheck = document.createElement("input");
 themeCheck.id = "theme-switcher";
