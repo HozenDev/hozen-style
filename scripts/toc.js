@@ -1,76 +1,79 @@
-const content = document.getElementById("content");
-const toc = document.getElementById("table-of-contents");
-let header = document.createElement("header");
-let main = document.createElement("main");
+window.addEventListener('load', function () {
 
-tocAndContentToMain();
-createHeader();
+    const content = document.getElementById("content");
+    const toc = document.getElementById("table-of-contents");
+    let header = document.createElement("header");
+    let main = document.createElement("main");
 
-function createHeader() {
-    header.appendChild(document.getElementsByClassName("title")[0]);
-    document.body.insertBefore(header, main);
-}
+    tocAndContentToMain();
+    createHeader();
 
-function tocAndContentToMain() {
-    document.body.insertBefore(main, document.getElementById("postamble"));
-    main.appendChild(toc);
-    main.appendChild(content);
-}
-
-function tocFollowContent() {
-    let marginLeftOfContent = getComputedStyle(content, null).marginLeft;
-    marginLeftOfContent = parseInt(marginLeftOfContent, 10);
-
-    let widthToc = getComputedStyle(toc, null).width;
-    widthToc = parseInt(widthToc, 10);
-    
-    if (marginLeftOfContent > widthToc) {
-	content.style.margin = "0 auto";
-	toc.style.left = `${marginLeftOfContent - widthToc + 2}px`;
+    function createHeader() {
+	header.appendChild(document.getElementsByClassName("title")[0]);
+	document.body.insertBefore(header, main);
     }
-}
 
-function tocTopResize() {
-    let heightTitle = getComputedStyle(document.getElementsByClassName("title")[0], null).height;
-    toc.style.marginTop = heightTitle;
-}
+    function tocAndContentToMain() {
+	document.body.insertBefore(main, document.getElementById("postamble"));
+	main.appendChild(toc);
+	main.appendChild(content);
+    }
 
-/* Media Query Toc */
+    function tocFollowContent() {
+	let marginLeftOfContent = getComputedStyle(content, null).marginLeft;
+	marginLeftOfContent = parseInt(marginLeftOfContent, 10);
 
-toc.getElementsByTagName('h2')[0].addEventListener('click', (e) => {
-    if (!window.matchMedia("(min-width: 840px)").matches) {
+	let widthToc = getComputedStyle(toc, null).width;
+	widthToc = parseInt(widthToc, 10);
+	
+	if (marginLeftOfContent > widthToc) {
+	    content.style.margin = "0 auto";
+	    toc.style.left = `${marginLeftOfContent - widthToc + 2}px`;
+	}
+    }
+
+    function tocTopResize() {
+	let heightTitle = getComputedStyle(document.getElementsByClassName("title")[0], null).height;
+	toc.style.marginTop = heightTitle;
+    }
+
+    /* Media Query Toc */
+
+    toc.getElementsByTagName('h2')[0].addEventListener('click', (e) => {
+	if (!window.matchMedia("(min-width: 840px)").matches) {
+	    let textOfToc = document.getElementById('text-table-of-contents');
+	    if (getComputedStyle(textOfToc, null).visibility === 'hidden') {
+		textOfToc.style.visibility = "visible";
+		let rect = toc.getBoundingClientRect();
+		textOfToc.style.top = `${parseInt(rect.y, 10)+parseInt(rect.height, 10)}px`;
+	    }
+	    else {
+		textOfToc.style.visibility = "hidden";
+	    }
+	}
+    });
+
+    window.addEventListener('scroll', (e) => {
+	if (!window.matchMedia("(min-width: 840px)").matches) {
+	    let textOfToc = document.getElementById('text-table-of-contents');
+	    if (getComputedStyle(textOfToc, null).visibility === 'visible') {
+		let rect = toc.getBoundingClientRect();
+		textOfToc.style.top = `${parseInt(rect.y, 10)+parseInt(rect.height, 10)}px`;
+	    }
+	}
+    });
+
+    window.addEventListener('resize', (e) => {
 	let textOfToc = document.getElementById('text-table-of-contents');
-	if (getComputedStyle(textOfToc, null).visibility === 'hidden') {
-	    textOfToc.style.visibility = "visible";
-	    let rect = toc.getBoundingClientRect();
-	    textOfToc.style.top = `${parseInt(rect.y, 10)+parseInt(rect.height, 10)}px`;
+	if (window.matchMedia("(min-width: 840px)").matches) {
+	    if (getComputedStyle(textOfToc, null).visibility === 'hidden') {
+		textOfToc.style.visibility = "visible";
+	    }
 	}
 	else {
-	    textOfToc.style.visibility = "hidden";
+	    if (getComputedStyle(textOfToc, null).visibility === 'visible') {
+		textOfToc.style.visibility = "hidden";
+	    }
 	}
-    }
-});
-
-window.addEventListener('scroll', (e) => {
-    if (!window.matchMedia("(min-width: 840px)").matches) {
-	let textOfToc = document.getElementById('text-table-of-contents');
-	if (getComputedStyle(textOfToc, null).visibility === 'visible') {
-	    let rect = toc.getBoundingClientRect();
-	    textOfToc.style.top = `${parseInt(rect.y, 10)+parseInt(rect.height, 10)}px`;
-	}
-    }
-});
-
-window.addEventListener('resize', (e) => {
-    let textOfToc = document.getElementById('text-table-of-contents');
-    if (window.matchMedia("(min-width: 840px)").matches) {
-	if (getComputedStyle(textOfToc, null).visibility === 'hidden') {
-	    textOfToc.style.visibility = "visible";
-	}
-    }
-    else {
-	if (getComputedStyle(textOfToc, null).visibility === 'visible') {
-	    textOfToc.style.visibility = "hidden";
-	}
-    }
+    });
 });
