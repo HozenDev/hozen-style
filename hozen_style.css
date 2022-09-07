@@ -325,12 +325,18 @@ table {
     overflow: auto;
 }
 
+table td:hover {
+    background-color: var(--example-bg);
+    transition: .2s;
+}
+
 table td {
     padding: .5em;
     box-sizing: border-box;
     border: 1px solid var(--color-fg);
-    color: var(--color-fg);
+    color: var(--font-color);
     font-family: monospace;
+    transition: .2s;
 }
 
 table > caption {
