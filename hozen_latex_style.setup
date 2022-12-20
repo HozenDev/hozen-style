@@ -1,0 +1,114 @@
+# -*- mode: org; -*-
+
+#+LATEX_HEADER: \usepackage{lmodern} % Ensures we have the right font
+
+#+LATEX_HEADER: \usepackage{graphicx}
+#+LATEX_HEADER: \usepackage{amsmath, amsthm, amssymb}
+#+LATEX_HEADER: \usepackage[table, xcdraw]{xcolor}
+#+LATEX_HEADER: \usepackage{fancyhdr}
+
+% --------------------------------------
+% New include graphics
+
+% With tcbox (Outdated)
+
+# #+LATEX_HEADER: \usepackage[most]{tcolorbox}
+# #+LATEX_HEADER: \LetLtxMacro\latexincludegraphics\includegraphics % save the function
+# #+LATEX_HEADER: \renewcommand{\includegraphics}[2][]{\tcbox{\latexincludegraphics[#1]{#2}}}
+
+% With fcolorbox (current)
+
+#+LATEX_HEADER: \fboxsep=0mm
+#+LATEX_HEADER: \fboxrule=1pt
+#+LATEX_HEADER: \usepackage{letltxmacro}
+#+LATEX_HEADER: \LetLtxMacro\latexincludegraphics\includegraphics % save the function
+#+LATEX_HEADER: \renewcommand{\includegraphics}[2][]{\fcolorbox{black}{white}{\latexincludegraphics[#1]{#2}}}
+
+% --------------------------------------
+% Marge
+
+#+LATEX_HEADER: \usepackage[left=2cm,right=2cm,top=3cm,bottom=3cm]{geometry}
+
+% Header, footer
+
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhf{}
+#+LATEX_HEADER: \lhead{Modify in current org file : \lhead{foo}}
+#+LATEX_HEADER: \rfoot{Page \thepage}
+
+% Titling align
+
+#+LATEX_HEADER: \usepackage{titling}
+#+LATEX_HEADER: \setlength{\droptitle}{-8ex}
+#+LATEX_HEADER: \pretitle{\begin{flushleft}\Large\bfseries}
+#+LATEX_HEADER: \posttitle{\par\end{flushleft}}
+#+LATEX_HEADER: \preauthor{\begin{flushleft}\large}
+#+LATEX_HEADER: \postauthor{\end{flushleft}}
+#+LATEX_HEADER: \predate{\begin{flushleft}}
+#+LATEX_HEADER: \postdate{\end{flushleft}}
+
+% Sections
+
+#+LATEX_HEADER: \usepackage[normalem]{ulem}
+#+LATEX_HEADER: \usepackage{sectsty}
+#+LATEX_HEADER: \sectionfont{\underline}
+
+% No number section
+
+#+LATEX_HEADER: \makeatletter
+#+LATEX_HEADER: \def\@seccntformat#1{%
+#+LATEX_HEADER:   \expandafter\ifx\csname c@#1\endcsname\c@section\else
+#+LATEX_HEADER:   \csname the#1\endcsname\quad
+#+LATEX_HEADER:   \fi}
+#+LATEX_HEADER: \makeatother
+
+% Color link
+
+#+LATEX_HEADER: \definecolor{bblue}{HTML}{275382}
+#+LATEX_HEADER: \usepackage[colorlinks]{hyperref}
+#+LATEX_HEADER: \hypersetup{colorlinks, linkcolor=bblue, urlcolor=bblue}
+
+% Color caption
+
+#+LATEX_HEADER: \usepackage[font={color=gray},figurename=Fig.,labelfont={it}]{caption}
+
+% Page numbering - this disables it
+
+# #+LATEX_HEADER: \pagenumbering{gobble}
+
+% Taille Image par défaut
+
+#+LATEX_HEADER: \usepackage{graphicx}
+#+LATEX_HEADER: \setkeys{Gin}{width=\linewidth}
+#+LATEX_HEADER: \setkeys{Gin}{height=\textheight}
+#+LATEX_HEADER: \setkeys{Gin}{keepaspectratio}
+
+% List spacing
+#+LATEX_HEADER: \usepackage{enumitem}
+#+LATEX_HEADER: \setlist{noitemsep}
+# #+LATEX_HEADER: \setlist{itemsep=-2pt}
+
+% name of ToC
+
+#+LATEX_HEADER: \renewcommand{\contentsname}{Sommaire}
+
+% pretty code
+
+#+LATEX_HEADER: \usepackage{listings}
+#+LATEX_HEADER: \usepackage{xcolor}
+#+LATEX_HEADER: \usepackage[utf8]{inputenc}
+#+LATEX_HEADER: \usepackage[table]{color}
+#+LATEX_HEADER: 
+#+LATEX_HEADER: \definecolor{grayW}{rgb}{0.94,0.94,1.00}
+#+LATEX_HEADER: \definecolor{bluegr}{rgb}{0.0,0.50,0.50}
+#+LATEX_HEADER: \definecolor{redp}{rgb}{0.80,0.10,0.10}
+#+LATEX_HEADER: 
+#+LATEX_HEADER: \lstset{
+#+LATEX_HEADER:   backgroundcolor=\color{grayW},
+#+LATEX_HEADER:   keywordstyle=\color{bluegr},
+#+LATEX_HEADER:   stringstyle=\color{redp},
+#+LATEX_HEADER:   basicstyle=\ttfamily\footnotesize,
+#+LATEX_HEADER:   breakatwhitespace=false,
+#+LATEX_HEADER:   numbers=left,
+#+LATEX_HEADER:   numbersep=5pt,
+#+LATEX_HEADER: }
