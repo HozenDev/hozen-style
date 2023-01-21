@@ -189,7 +189,7 @@ pre {
 #theme-switcher:hover {
     margin: 1em;
     transition: .3s;
-    background-color: rgba(0, 0, 0, 0.3);
+    /* background-color: rgba(0, 0, 0, 0.3); */
     cursor: pointer;
 }
 
