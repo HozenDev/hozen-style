@@ -169,15 +169,15 @@ pre {
 }
 
 #table-of-contents a:hover {
-    border-color: #9fc9d4;
-    background-color: rgba(255, 255, 255, 0.2);
+    border-color: var(--legend-color);
+    background-color: var(--example-bg);
     transition: .3s;
 }
 
 #theme-switcher {
     border-radius: none;
     font-size: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: var(--example-bg);
     margin: 1em 2em;
     padding: 0.5em;
     border: solid 2px var(--color-fg);
