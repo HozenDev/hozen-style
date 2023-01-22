@@ -15,9 +15,12 @@ html {
     --color-bg-alt: #3F4E4F;
     --font-color: #DCD7C9;
 
-    --toc-a-first: #D9D9D9;
+    --toc-a-first: #DCD7C9;
     --toc-a-second: #A27B5C;
     --toc-a-third: #3F4E4F;
+    --toc-bg-a-first: rgba(0, 0, 0, 0.3);
+    --toc-bg-a-second: rgba(0, 0, 0, 0.2);
+    --toc-bg-a-third: rgba(0, 0, 0, 0.1);
 
     --legend-color: rgba(255, 255, 255, 0.4);
     --example-bg: rgba(0, 0, 0, 0.4);
@@ -32,9 +35,12 @@ html {
     --toc-a-first: #576F72;
     --toc-a-second: #7D9D9C;
     --toc-a-third: #E4DCCF;
+    --toc-bg-a-first: rgba(190, 190, 190, 0.3);
+    --toc-bg-a-second: rgba(190, 190, 190, 0.2);
+    --toc-bg-a-third: rgba(190, 190, 190, 0.1);
 
     --legend-color: rgba(0, 0, 0, 0.4);
-    --example-bg: rgba(255, 255, 255, 0.4);
+    --example-bg: rgba(255, 255, 255, 0.5);
 }
 
 body {
@@ -136,7 +142,7 @@ pre {
 #table-of-contents {
     float: left;
     display: flex;
-    flex-wrap: no-wrap;
+    /* flex-wrap: no-wrap; */
     flex-direction: column;
     position: sticky;
     height: 100vh;
@@ -169,13 +175,13 @@ pre {
 }
 
 #table-of-contents a:hover {
-    border-color: var(--legend-color);
+    border-color: var(--example-bg);
     background-color: var(--example-bg);
     transition: .3s;
 }
 
 #theme-switcher {
-    border-radius: none;
+    /* border-radius: none; */
     font-size: 100%;
     background-color: var(--example-bg);
     margin: 1em 2em;
@@ -203,16 +209,23 @@ pre {
     display: block;
     font-size: 90%;
     border-right: solid 30px var(--toc-a-first);
+    background-color: var(--toc-bg-a-first);
+}
+
+#text-table-of-contents > ul > li > ul {
+    display: none;
 }
 
 #table-of-contents li ul li ul li a {
     padding-left: 3rem;
     border-right: solid 10px var(--toc-a-third);
+    background-color: var(--toc-bg-a-third);
 }
 
 #table-of-contents li ul li a {
     padding-left: 2rem;
     border-right: solid 20px var(--toc-a-second);
+    background-color: var(--toc-bg-a-second);
 }
 
 .outline-2 {
@@ -233,7 +246,7 @@ pre {
 }
 
 .title {
-    flex-grow: 100%;
+    /* flex-grow: 100%; */
     text-align: center;
     color: var(--font-color);
     padding: 7rem 0;
@@ -321,6 +334,9 @@ pre.example {
 }
 
 table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 1rem auto;
     overflow: auto;
 }
@@ -384,7 +400,7 @@ table > caption {
 	top: 0;
 	z-index: 2000;
 	flex-direction: row;
-	flex-wrap: no-wrap;
+	/* flex-wrap: no-wrap; */
 	align-items: center;
 	border-bottom: 2px solid var(--color-fg);
 	border-top: 2px solid var(--color-fg);

@@ -39,6 +39,25 @@ window.addEventListener('load', function () {
 
     /* Media Query Toc */
 
+    let firstTocTitles = document.querySelectorAll('#text-table-of-contents > ul > li > a');
+    
+    for (let i = 0; i < firstTocTitles.length ; i++) {
+	firstTocTitles[i].addEventListener('click', (e) => {
+	    let secondTocTitles = firstTocTitles[i].parentNode.querySelector('ul');
+	    if (secondTocTitles.style.display != "contents") {
+		secondTocTitles.style.display = "contents";
+	    } else {
+		secondTocTitles.style.display = "none";
+	    }
+	    for (let j = 0; j < firstTocTitles.length; j++) {
+		if (j != i) {
+		    secondTocTitles = firstTocTitles[j].parentNode.querySelector('ul');		
+		    secondTocTitles.style.display = "none";
+		}
+	    }
+	});
+    }
+    
     toc.getElementsByTagName('h2')[0].addEventListener('click', (e) => {
 	if (!window.matchMedia("(min-width: 840px)").matches) {
 	    let textOfToc = document.getElementById('text-table-of-contents');
@@ -52,6 +71,8 @@ window.addEventListener('load', function () {
 	    }
 	}
     });
+
+    /* Evenement de défilement pour resize la toc quand visible sur petits écrans */
 
     window.addEventListener('scroll', (e) => {
 	if (!window.matchMedia("(min-width: 840px)").matches) {
