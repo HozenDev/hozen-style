@@ -18,13 +18,18 @@
 
 % With fcolorbox (current)
 
-#+LATEX_HEADER: \fboxsep=0mm
-#+LATEX_HEADER: \fboxrule=1pt
-#+LATEX_HEADER: \usepackage{letltxmacro}
-#+LATEX_HEADER: \LetLtxMacro\latexincludegraphics\includegraphics % save the function
-#+LATEX_HEADER: \renewcommand{\includegraphics}[2][]{\fcolorbox{black}{white}{\latexincludegraphics[#1]{#2}}}
+# #+LATEX_HEADER: \fboxsep=0mm
+# #+LATEX_HEADER: \fboxrule=1pt
+# #+LATEX_HEADER: \usepackage{letltxmacro}
+# #+LATEX_HEADER: \LetLtxMacro\latexincludegraphics\includegraphics % save the function
+# #+LATEX_HEADER: \renewcommand{\includegraphics}[2][]{\fcolorbox{black}{white}{\latexincludegraphics[#1]{#2}}}
 
 % --------------------------------------
+% Marge
+
+#+LATEX_HEADER: \usepackage[lined,boxed,commentsnumbered,ruled,vlined,linesnumbered]{algorithm2e}
+#+LATEX_HEADER: \SetKwComment{Comment}{$\triangleright$\ }{}
+
 % Marge
 
 #+LATEX_HEADER: \usepackage[left=2cm,right=2cm,top=3cm,bottom=3cm]{geometry}
@@ -78,10 +83,10 @@
 
 % Taille Image par défaut
 
-#+LATEX_HEADER: \usepackage{graphicx}
-#+LATEX_HEADER: \setkeys{Gin}{width=\linewidth}
-#+LATEX_HEADER: \setkeys{Gin}{height=\textheight}
-#+LATEX_HEADER: \setkeys{Gin}{keepaspectratio}
+# #+LATEX_HEADER: \usepackage{graphicx}
+# #+LATEX_HEADER: \setkeys{Gin}{width=\linewidth}
+# #+LATEX_HEADER: \setkeys{Gin}{height=\textheight}
+# #+LATEX_HEADER: \setkeys{Gin}{keepaspectratio}
 
 % List spacing
 #+LATEX_HEADER: \usepackage{enumitem}
