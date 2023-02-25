@@ -1,2 +1,14 @@
-# ignore les fichiers tests
-/tests/
+# ignore all
+/*
+
+# don't ignore gitignore
+!/.gitignore
+
+# don't ignore setup files
+!/*.setup
+
+# don't ignore css files
+!/*.css
+
+# don't ignore scripts dir
+!/scripts

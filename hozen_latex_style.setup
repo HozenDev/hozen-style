@@ -99,21 +99,60 @@
 
 % pretty code
 
+# #+LATEX_HEADER: \usepackage{listings}
+# #+LATEX_HEADER: \usepackage{xcolor}
+# #+LATEX_HEADER: \usepackage[utf8]{inputenc}
+# #+LATEX_HEADER: \usepackage[table]{color}
+# #+LATEX_HEADER: 
+# #+LATEX_HEADER: \definecolor{grayW}{rgb}{0.94,0.94,0.94}
+# #+LATEX_HEADER: \definecolor{bluegr}{rgb}{0.0,0.50,0.50}
+# #+LATEX_HEADER: \definecolor{redp}{rgb}{0.80,0.10,0.10}
+# #+LATEX_HEADER: 
+# #+LATEX_HEADER: \lstset{
+# #+LATEX_HEADER:   backgroundcolor=\color{grayW},
+# #+LATEX_HEADER:   keywordstyle=\color{bluegr},
+# #+LATEX_HEADER:   stringstyle=\color{redp},
+# #+LATEX_HEADER:   basicstyle=\ttfamily\footnotesize,
+# #+LATEX_HEADER:   breakatwhitespace=false,
+# #+LATEX_HEADER:   numbers=left,
+# #+LATEX_HEADER:   numbersep=5pt,
+# #+LATEX_HEADER: }
+
 #+LATEX_HEADER: \usepackage{listings}
-#+LATEX_HEADER: \usepackage{xcolor}
-#+LATEX_HEADER: \usepackage[utf8]{inputenc}
-#+LATEX_HEADER: \usepackage[table]{color}
+#+LATEX_HEADER: \usepackage{tikz}
+#+LATEX_HEADER: \usepackage{lstautogobble}  % Fix relative indenting
+#+LATEX_HEADER: \usepackage{color}          % Code coloring
+#+LATEX_HEADER: \usepackage{zi4}            % Nice font
 #+LATEX_HEADER: 
-#+LATEX_HEADER: \definecolor{grayW}{rgb}{0.94,0.94,1.00}
-#+LATEX_HEADER: \definecolor{bluegr}{rgb}{0.0,0.50,0.50}
-#+LATEX_HEADER: \definecolor{redp}{rgb}{0.80,0.10,0.10}
+#+LATEX_HEADER: \definecolor{bluekeywords}{rgb}{0.13, 0.13, 1}
+#+LATEX_HEADER: \definecolor{greencomments}{rgb}{0, 0.5, 0}
+#+LATEX_HEADER: \definecolor{redstrings}{rgb}{0.9, 0, 0}
+#+LATEX_HEADER: \definecolor{graynumbers}{rgb}{0.5, 0.5, 0.5}
+#+LATEX_HEADER: \definecolor{grayW}{rgb}{0.96,0.96,0.97}
 #+LATEX_HEADER: 
+#+LATEX_HEADER: \usepackage{listings}
 #+LATEX_HEADER: \lstset{
-#+LATEX_HEADER:   backgroundcolor=\color{grayW},
-#+LATEX_HEADER:   keywordstyle=\color{bluegr},
-#+LATEX_HEADER:   stringstyle=\color{redp},
-#+LATEX_HEADER:   basicstyle=\ttfamily\footnotesize,
-#+LATEX_HEADER:   breakatwhitespace=false,
-#+LATEX_HEADER:   numbers=left,
-#+LATEX_HEADER:   numbersep=5pt,
+#+LATEX_HEADER:     backgroundcolor=\color{grayW},
+#+LATEX_HEADER:     autogobble,
+#+LATEX_HEADER:     columns=fullflexible,
+#+LATEX_HEADER:     showspaces=false,
+#+LATEX_HEADER:     showtabs=false,
+#+LATEX_HEADER:     breaklines=true,
+#+LATEX_HEADER:     showstringspaces=false,
+#+LATEX_HEADER:     breakatwhitespace=true,
+#+LATEX_HEADER:     escapeinside={(*@}{@*)},
+#+LATEX_HEADER:     commentstyle=\color{greencomments},
+#+LATEX_HEADER:     keywordstyle=\color{bluekeywords},
+#+LATEX_HEADER:     stringstyle=\color{redstrings},
+#+LATEX_HEADER:     numberstyle=\color{graynumbers},
+#+LATEX_HEADER:     basicstyle=\ttfamily\footnotesize,
+#+LATEX_HEADER:     frame=tlbr,
+#+LATEX_HEADER:     framesep=12pt,
+#+LATEX_HEADER:     xleftmargin=12pt,
+#+LATEX_HEADER:     tabsize=4,
+#+LATEX_HEADER:     captionpos=b,
+#+LATEX_HEADER:     framexleftmargin=15pt,
+#+LATEX_HEADER:     framerule=0pt
 #+LATEX_HEADER: }
+
+
