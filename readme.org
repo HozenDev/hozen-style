@@ -9,9 +9,9 @@ None.
 ** Setupfile
 Add on top of an org file:
 
-#+begin_src text
+#+begin_example
 #+SETUPFILE: https://hozendev.github.io/hozen-style/hozen_html_style.setup
-#+end_src
+#+end_example
 
 * LaTeX Setup
 ** Prerequisite
@@ -26,7 +26,8 @@ Add these lines to your emacs configuration:
 #+end_src
 
 ** Setupfile
+Add on top of an org file:
 
-#+begin_src text
+#+begin_example
 #+SETUPFILE: https://hozendev.github.io/hozen-style/hozen_latex_style.setup
-#+end_src
+#+end_example
