@@ -1,0 +1,32 @@
+#+author: DUREL Enzo
+#+title: Hozen org-export setups
+
+* HTML Setup
+** Prerequisite
+
+None.
+
+** Setupfile
+Add on top of an org file:
+
+#+begin_src text
+#+SETUPFILE: https://hozendev.github.io/hozen-style/hozen_html_style.setup
+#+end_src
+
+* LaTeX Setup
+** Prerequisite
+*** src-block
+
+To export src-block correctly you need to tell emacs that you export with listings latex package.
+Add these lines to your emacs configuration:
+
+#+begin_src emacs-lisp
+  (setq org-latex-listings 'listings)
+  (add-to-list 'org-latex-packages-alist '("" "listings"))
+#+end_src
+
+** Setupfile
+
+#+begin_src text
+#+SETUPFILE: https://hozendev.github.io/hozen-style/hozen_latex_style.setup
+#+end_src

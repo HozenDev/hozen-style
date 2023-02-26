@@ -4,6 +4,9 @@
 # don't ignore gitignore
 !/.gitignore
 
+# don't ignore readme
+!/readme.org
+
 # don't ignore setup files
 !/*.setup
 
