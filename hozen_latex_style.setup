@@ -27,6 +27,8 @@
 % --------------------------------------
 % Marge
 
+# #+LATEX_HEADER: \usepackage{algorithmicx}
+# #+LATEX_HEADER: \usepackage{algpseudocode}
 #+LATEX_HEADER: \usepackage[lined,boxed,commentsnumbered,ruled,vlined,linesnumbered]{algorithm2e}
 #+LATEX_HEADER: \SetKwComment{Comment}{$\triangleright$\ }{}
 
@@ -36,10 +38,27 @@
 
 % Header, footer
 
+% Page default headers
+
 #+LATEX_HEADER: \pagestyle{fancy}
-#+LATEX_HEADER: \fancyhf{}
-#+LATEX_HEADER: \lhead{Modify in current org file : \lhead{foo}}
-#+LATEX_HEADER: \rfoot{Page \thepage}
+
+# #+LATEX_HEADER: \fancyhf{}
+# #+LATEX_HEADER: \fancyhead[L]{\rightmark}
+# #+LATEX_HEADER: \fancyfoot[R]{\thepage}
+# #+LATEX_HEADER: \renewcommand{\headrulewidth}{1pt}
+
+# #+LATEX_HEADER: \newcommand{\TheAuthor}{} % As given in documentation of **fancyhdr**
+# #+LATEX_HEADER: \newcommand{\Author}[1]{\renewcommand{\TheAuthor}{#1}}
+#+LATEX_HEADER: \fancyhead{} % clear all fields
+#+LATEX_HEADER: \fancyfoot{} % clear all fields
+#+LATEX_HEADER: \fancyhead[L]{\slshape \rightmark}
+#+LATEX_HEADER: \fancyfoot[R]{Page \thepage}
+#+LATEX_HEADER: \renewcommand{\headrulewidth}{0.1pt}
+#+LATEX_HEADER: \renewcommand{\footrulewidth}{0pt}
+
+# #+LATEX_HEADER: \fancyhf{}
+# #+LATEX_HEADER: \lhead{Modify in current org file : \lhead{foo}}
+# #+LATEX_HEADER: \rfoot{Page \thepage}
 
 % Titling align
 
@@ -154,5 +173,3 @@
 #+LATEX_HEADER:     framexleftmargin=15pt,
 #+LATEX_HEADER:     framerule=0pt
 #+LATEX_HEADER: }
-
-
