@@ -24,6 +24,8 @@ html {
 
     --legend-color: rgba(255, 255, 255, 0.4);
     --example-bg: rgba(0, 0, 0, 0.4);
+
+    --src-bg: #192024;
 }
 
 .theme-light {
@@ -41,6 +43,8 @@ html {
 
     --legend-color: rgba(0, 0, 0, 0.4);
     --example-bg: rgba(255, 255, 255, 0.5);
+
+    --src-bg: #314042;
 }
 
 body {
@@ -71,6 +75,7 @@ main {
     max-height: 80%;
 }
 
+.listing-number,
 .figure-number,
 .table-number {
     color: var(--legend-color);
@@ -128,7 +133,7 @@ pre {
 
 #content {
     max-width: 70rem;
-    margin-left: 20rem;
+    margin-left: 24rem;
 }
 
 #content p {
@@ -137,6 +142,9 @@ pre {
     letter-spacing: .05em;
     line-height: 1.4em;
     word-break: break-word;
+    margin: 1rem 0;
+    padding: 0 4rem;
+    /* font-weight: 100; */
 }
 
 #table-of-contents {
@@ -148,12 +156,13 @@ pre {
     height: 100vh;
     min-width: 20rem;
     width: 20rem;
-    top: 0;
+    top: 2rem;
+    margin-left: 2rem;
 }
 
 #text-table-of-contents {
     order: 3;
-    border-top: 2px solid var(--color-fg);
+    border: 2px solid var(--color-fg);
     overflow-y: scroll;
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
@@ -169,9 +178,11 @@ pre {
     text-align: center;
     padding: 1em 0;
     color: var(--font-color);
-    border-top: 2px solid var(--color-fg);
-    border-bottom: 2px solid var(--color-fg);
+    border: 2px solid var(--color-fg);
     order: 1;
+    font-weight: 900;
+    font-variant: small-caps;
+    background-color: var(--toc-bg-a-first);
 }
 
 #table-of-contents a:hover {
@@ -263,12 +274,12 @@ pre {
     transition: .5s;
 }
 
-#content p,
 .outline-2 h2,
 .outline-3 h3,
 .outline-2 h4 {    
     padding: 0 2rem;
-    margin: 1rem 0;
+    margin: 2rem 0;
+    /* text-decoration: underline; */
 }
 
 .outline-2:nth-child(2n) {
@@ -291,6 +302,15 @@ pre {
     transition: .5s;
     padding-top: 1rem;
     margin-top: 0;
+    font-weight: 900;
+}
+
+.outline-3 h3 {
+    font-weight: 700;
+}
+
+.outline-4 h4 {
+    font-weight: 500;
 }
 
 .outline-2 h2 span::after,
@@ -298,7 +318,7 @@ pre {
 .outline-2 h4 span::after {
     content: " - ";
 }
-    
+
 .outline-3 h3,
 .outline-2 h4 {
     font-size: 120%;
@@ -314,10 +334,23 @@ code {
 
 pre.src {
     color: white;
-    border: 2px solid #e6e6e6;
-    background-color:#192024;
+    border: 2px solid var(--color-fg);
+    background-color: var(--src-bg);
     line-height: 1.5em;
     font-family: monospace;
+}
+
+.org-src-container {
+    
+}
+
+label.org-src-name {
+    margin: 1rem 0;
+    display: inline-block;
+    font-size: 120%;
+    color: var(--color-fg);
+    min-width: 100%;
+    text-align: center;
 }
 
 pre.example:hover {
@@ -328,9 +361,10 @@ pre.example:hover {
 pre.example {
     border-left: 10px solid var(--toc-a-first);
     background-color: var(--example-bg);
-    color: var(--color-fg);
+    color: var(--font-color);
     transition: .2s;
     font-family: monospace;
+    font-weight: 500;
 }
 
 table {
@@ -356,10 +390,13 @@ table td {
 }
 
 table > caption {
+    margin: 1rem 0;
     font-size: 120%;
-    margin: 1rem;
-    margin-top: 0;
     color: var(--color-fg);
+}
+
+tbody {
+    margin: 1rem;
 }
 
 #postamble .validation {
@@ -383,6 +420,15 @@ table > caption {
     right: 0;
     border-top: solid 1px var(--color-fg);
     color: var(--font-color);
+}
+
+@media (max-width: 1200px) {
+    #table-of-contents {
+        margin-left: 0;
+    }
+    #content {
+        margin-left: 20rem;
+    }
 }
 
 @media (max-width: 840px) {
