@@ -66,9 +66,12 @@ window.addEventListener('load', function () {
     /* show toc for resize if user end by hide it */
     let showToc = debounce(function() {
         if (resizeListener && window.innerWidth >= 840) {
-            textOfToc.style.visibility = "visible";
-            resizeListener = false;
-            window.removeEventListener('resize', showToc);
+            /* while to prevent too quick resize */
+            while (textOfToc.style.visibility != "visible") {
+                window.removeEventListener('resize', showToc, false);    
+                resizeListener = false;
+                textOfToc.style.visibility = "visible";
+            }
         }
     }, 250);
     
@@ -77,7 +80,7 @@ window.addEventListener('load', function () {
         if (!window.matchMedia("(min-width: 840px)").matches) {
 	    if (getComputedStyle(textOfToc, null).visibility === 'hidden') {
                 if (!resizeListener) {
-                    window.addEventListener('resize', showToc);
+                    window.addEventListener('resize', showToc, true);
                     resizeListener = true;
                 }
                 let h2 = toc.getElementsByTagName('h2')[0];
