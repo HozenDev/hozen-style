@@ -59,30 +59,21 @@ window.addEventListener('load', function () {
 	    if (callNow) func.apply(context, args);
 	};
     };
-    
-    /* listener to know if we need to look window resize for toc visibility */
-    let resizeListener = false;
 
     /* show toc for resize if user end by hide it */
     let showToc = debounce(function() {
-        if (resizeListener && window.innerWidth >= 840) {
-            /* while to prevent too quick resize */
-            while (textOfToc.style.visibility != "visible") {
-                window.removeEventListener('resize', showToc, false);    
-                resizeListener = false;
-                textOfToc.style.visibility = "visible";
-            }
+        if (window.innerWidth > 840) {
+            textOfToc.style.visibility = "visible";
         }
-    }, 250);
+        else {
+            textOfToc.style.visibility = "hidden";
+        }
+    }, 200);
     
     /* hide text of toc is click on h2 */
     toc.getElementsByTagName('h2')[0].addEventListener('click', (e) => {
         if (!window.matchMedia("(min-width: 840px)").matches) {
 	    if (getComputedStyle(textOfToc, null).visibility === 'hidden') {
-                if (!resizeListener) {
-                    window.addEventListener('resize', showToc, true);
-                    resizeListener = true;
-                }
                 let h2 = toc.getElementsByTagName('h2')[0];
                 textOfToc.style.visibility = "visible";
                 textOfToc.style.top = `${h2.offsetHeight}px`;
@@ -93,4 +84,6 @@ window.addEventListener('load', function () {
 	}
         
     });
+
+    window.addEventListener('resize', showToc);                
 });
