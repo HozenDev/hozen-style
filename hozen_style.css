@@ -166,6 +166,7 @@ pre {
     overflow-y: scroll;
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
+    visibility: visible;
 }
 
 #text-table-of-contents::-webkit-scrollbar { 
@@ -468,12 +469,13 @@ tbody {
     #text-table-of-contents {
 	visibility: hidden;
 	order: 3;
-	min-width: 20rem;
+	/* min-width: 20rem; */
 	width: 20rem;
-	position: fixed;
+        max-width: 100vw;
+	position: absolute;
 	background-color: var(--color-bg);
 	border-right: 2px solid var(--color-fg);
-	bottom: 0;
+	/* bottom: 0; */
     }
     .title {
 	font-size: 200%;
