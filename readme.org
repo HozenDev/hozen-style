@@ -10,7 +10,7 @@ None.
 Add on top of an org file:
 
 #+begin_example
-#+SETUPFILE: https://hozendev.github.io/hozen-style/hozen_html_style.setup
+#+SETUPFILE: https://hozendev.github.io/hozen-style/html/hozen.setup
 #+end_example
 
 * LaTeX Setup
@@ -29,5 +29,5 @@ Add these lines to your emacs configuration:
 Add on top of an org file:
 
 #+begin_example
-#+SETUPFILE: https://hozendev.github.io/hozen-style/hozen_latex_style.setup
+#+SETUPFILE: https://hozendev.github.io/hozen-style/latex/hozen.setup
 #+end_example

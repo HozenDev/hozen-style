@@ -9,7 +9,7 @@
 
 # don't ignore html files
 !/html
-!/html/*.css
+!/html/css
 !/html/scripts
 !/html/*.setup
 
