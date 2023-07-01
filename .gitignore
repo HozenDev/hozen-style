@@ -7,11 +7,13 @@
 # don't ignore readme
 !/readme.org
 
-# don't ignore setup files
-!/*.setup
+# don't ignore html files
+!/html
+!/html/*.css
+!/html/scripts
+!/html/*.setup
 
-# don't ignore css files
-!/*.css
+# don't ignore latex files
+!/latex
+!/latex/*.setup
 
-# don't ignore scripts dir
-!/scripts

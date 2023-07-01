@@ -32,8 +32,6 @@
 #+LATEX_HEADER: \usepackage[lined,boxed,commentsnumbered,ruled,vlined,linesnumbered]{algorithm2e}
 #+LATEX_HEADER: \SetKwComment{Comment}{$\triangleright$\ }{}
 
-% Marge
-
 #+LATEX_HEADER: \usepackage[left=2cm,right=2cm,top=3cm,bottom=3cm]{geometry}
 
 % Header, footer
@@ -60,7 +58,7 @@
 # #+LATEX_HEADER: \lhead{Modify in current org file : \lhead{foo}}
 # #+LATEX_HEADER: \rfoot{Page \thepage}
 
-% Titling align
+# % Titling align
 
 #+LATEX_HEADER: \usepackage{titling}
 #+LATEX_HEADER: \setlength{\droptitle}{-8ex}
@@ -86,11 +84,11 @@
 #+LATEX_HEADER:   \fi}
 #+LATEX_HEADER: \makeatother
 
-% Color link
+% Color link (disappear table of contents)
 
-#+LATEX_HEADER: \definecolor{bblue}{HTML}{275382}
-#+LATEX_HEADER: \usepackage[colorlinks]{hyperref}
-#+LATEX_HEADER: \hypersetup{colorlinks, linkcolor=bblue, urlcolor=bblue}
+# #+LATEX_HEADER: \definecolor{bblue}{HTML}{275382}
+# #+LATEX_HEADER: \usepackage[colorlinks]{hyperref}
+# #+LATEX_HEADER: \hypersetup{colorlinks, linkcolor=blue, urlcolor=blue}
 
 % Color caption
 
