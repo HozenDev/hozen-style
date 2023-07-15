@@ -1,12 +1,25 @@
 window.addEventListener('load', function () {
 
-    let themeCheck = document.createElement("input");
-    themeCheck.id = "theme-switcher";
-    themeCheck.type = "button";
-    themeCheck.value = "Theme Switcher";
+    let themeCheck = document.createElement("div");
+    let spanThemeCheck = document.createElement("span");
+    let labelThemeCheck = document.createElement("label");
+    let inputThemeCheck = document.createElement("input");
 
-    themeCheck.addEventListener('click', toogleTheme);
+    /* initialize each container */
+    themeCheck.className = "theme-switch";
+    labelThemeCheck.id = "switch";
+    labelThemeCheck.className = "switch";
+    inputThemeCheck.id = "slider";
+    inputThemeCheck.type = "checkbox";
+    spanThemeCheck.className = "slider round";
 
+    /* add event listener on click */
+    inputThemeCheck.addEventListener('click', toogleTheme);
+
+    /* insert theme check */
+    labelThemeCheck.appendChild(inputThemeCheck);
+    labelThemeCheck.appendChild(spanThemeCheck);
+    themeCheck.appendChild(labelThemeCheck);
     document.getElementById('table-of-contents').appendChild(themeCheck);
 
     /* set theme in html class */
