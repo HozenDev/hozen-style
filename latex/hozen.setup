@@ -112,7 +112,7 @@
 
 % name of ToC
 
-#+LATEX_HEADER: \renewcommand{\contentsname}{Sommaire}
+# #+LATEX_HEADER: \renewcommand{\contentsname}{Sommaire}
 
 % pretty code
 
@@ -171,3 +171,15 @@
 #+LATEX_HEADER:     framexleftmargin=15pt,
 #+LATEX_HEADER:     framerule=0pt
 #+LATEX_HEADER: }
+
+% --------------------------------------
+% Modify tabular environment
+
+#+LATEX_HEADER: \setlength{\arrayrulewidth}{0.3mm}
+#+LATEX_HEADER: \setlength{\tabcolsep}{3pt}
+#+LATEX_HEADER: \renewcommand{\arraystretch}{1.2}
+
+% --------------------------------------
+% No indention in new paragraph
+
+#+LATEX_HEADER: \usepackage[parfill]{parskip}
