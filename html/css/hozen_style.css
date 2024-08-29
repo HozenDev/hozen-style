@@ -483,9 +483,7 @@ input:checked + .slider:before {
     border: 2px solid var(--color-fg);
 }
 
-// ------------------------------
-// Fonts decoration
-// ------------------------------
+/* Font decoration */
 
 b {
     font-weight: 900;
@@ -503,17 +501,11 @@ mjx-labels {
     display: none;
 }
 
-// ------------------------------
-// Classes
-// ------------------------------
-
 .underline {
     text-decoration: underline;
 }
 
-// ------------------------------
-// Media
-// ------------------------------
+/* Media */
 
 @media (max-width: 1200px) {
     #table-of-contents {
