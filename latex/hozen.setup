@@ -112,7 +112,9 @@
 
 % name of ToC
 
-# #+LATEX_HEADER: \renewcommand{\contentsname}{Sommaire}
+# #+LATEX_HEADER: \renewcommand{\contentsname}{}
+# #+LATEX_HEADER: \renewcommand{\listfigurename}{}
+# #+LATEX_HEADER: \renewcommand{\listtablename}{}
 
 % pretty code
 
@@ -182,4 +184,20 @@
 % --------------------------------------
 % No indention in new paragraph
 
-#+LATEX_HEADER: \usepackage[parfill]{parskip}
+# #+LATEX_HEADER: \usepackage[parfill]{parskip}
+
+% ---- TOC
+
+% Add section dot
+
+#+LATEX_HEADER: \usepackage{tocloft}
+#+LATEX_HEADER: \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+% indent first paragraph after section
+
+#+LATEX_HEADER: \usepackage{indentfirst}
+
+% interline space
+
+#+LATEX_HEADER: \usepackage{setspace}
+#+LATEX_HEADER: \setstretch{1,15}
