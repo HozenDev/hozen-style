@@ -495,6 +495,14 @@ i {
     font-style: italic;
 }
 
+mjx-container {
+    color: var(--font-color);
+}
+
+mjx-labels {
+    display: none;
+}
+
 // ------------------------------
 // Classes
 // ------------------------------
