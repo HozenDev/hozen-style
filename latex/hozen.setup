@@ -200,4 +200,4 @@
 % interline space
 
 #+LATEX_HEADER: \usepackage{setspace}
-#+LATEX_HEADER: \setstretch{1,15}
+#+LATEX_HEADER: \setstretch{1,25}
