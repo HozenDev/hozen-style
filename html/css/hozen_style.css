@@ -483,6 +483,30 @@ input:checked + .slider:before {
     border: 2px solid var(--color-fg);
 }
 
+// ------------------------------
+// Fonts decoration
+// ------------------------------
+
+b {
+    font-weight: 900;
+}
+
+i {
+    font-style: italic;
+}
+
+// ------------------------------
+// Classes
+// ------------------------------
+
+.underline {
+    text-decoration: underline;
+}
+
+// ------------------------------
+// Media
+// ------------------------------
+
 @media (max-width: 1200px) {
     #table-of-contents {
         margin-left: 0;
