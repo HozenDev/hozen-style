@@ -13,6 +13,17 @@ Add on top of an org file:
 #+SETUPFILE: https://hozendev.github.io/hozen-style/html/hozen.setup
 #+end_example
 
+** Add a banner image
+
+You can add a banner image using this:
+
+#+begin_example
+\* Banner :ignore:
+
+#+ATTR_HTML: :class banner
+<link_image>
+#+end_example
+
 * LaTeX Setup
 ** Prerequisite
 *** src-block
